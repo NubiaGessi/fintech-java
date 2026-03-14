@@ -12,19 +12,20 @@ public class App {
         //GASTO
 
         System.out.println("Data do gasto: ");
-        String expenseDate = sc.nextLine();
+        String transactionDate = sc.nextLine();
 
         System.out.println("Descrição do gasto: ");
-        String expenseDescription = sc.nextLine();
+        String transactionDescription = sc.nextLine();
 
         System.out.println("Valor do gasto: ");
-        double expenseValue = sc.nextDouble();
+        double transactionValue = sc.nextDouble();
         sc.nextLine();
 
-        Expense expense = new Expense(expenseDate, expenseDescription, expenseValue);
+        Expense expense = new Expense(transactionDate, transactionDescription, transactionValue);
 
-        expense.showExpense();
-        expense.editExpense();
+        expense.showTransaction();
+        expense.editTransaction();
+        System.out.println(expense.getResume());
 
         //RECEITA
 
@@ -40,8 +41,9 @@ public class App {
 
         Income income = new Income(incomeDate, incomeDescription, incomeValue);
 
-        income.showIncome();
-        income.editIncome();
+        income.showTransaction();
+        income.editTransaction();
+        System.out.println(income.getResume());
 
         //META
         System.out.println("Data para atingir a meta: ");
